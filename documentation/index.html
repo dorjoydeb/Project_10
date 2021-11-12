@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Documentation - Hire Me HTML Template</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Style.css -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+		
+		<div class="menu">
+			<h2>Hire Me</h2>
+			<h4>HTML Template</h4>
+			<nav>
+				<ul class="list-unstyled">
+					<li><a href="#welcome">Welcome</a></li>
+					<li><a href="#features">Template Features</a></li>
+					<li><a href="#templates">Templates</a></li>
+					<li><a href="#contact-form">Contact Form</a></li>
+					<li><a href="#mailchimp-form">Google Map</a></li>
+					<li><a href="#mainnav">Main Navigation</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="body">
+			<section id="welcome">
+				<h1>Welcome</h1>
+				<p>This documentation is going to assume you know how to edit HTML, since you bought an html template, and just show you some of the things specific to this template.</p>
+			</section>
+			<section id="features">
+				<h3>Template Features</h3>
+
+				<ul class="list">
+			      	<li>One Page with 2 Demos</li>
+					<li>Working Contact Form</li>
+			      	<li>Google map</li>
+			      	<li>Clean &amp; Simple Design</li>
+					<li>Advance Framework</li>
+			       	<li>HTML5 &amp; CSS3</li>
+			   		<li>Fully Responsive Design</li>
+					<li>Mutipurpose Concept</li>
+					<li>All files are well commented</li>
+					<li>Crossbrowser Compatible with IE9+, Firefox, Safari, Opera, Chrome</li>
+					<li>Extensive Documentation</li>
+				</ul>
+			</section>
+			<section id="templates">
+				<h1>Templates</h1>
+				<ul>
+					<li>index.html</li>
+					<li>home-2.html</li>
+				</ul>
+				<p>Edit these templates to suit your needs.</p>
+			</section>
+			<section id="contact-form">
+				<h1>Contact Form</h1>
+				<p>Contact form setup is simple. In <i><b>contact.php</b></i> the main folder, add your email address to the <i><b>to</b></i> define("__TO__", "test@gmail.com");.</p>
+				<pre>&lt;#Your e-mail address
+					define("__TO__", "test@gmail.com");
+				?&gt;</pre>
+				<p>Feel free to format the email any way you wish (requires some php knowledge).</p>
+			</section>
+			<section id="mailchimp-form">
+				<h1>Google Map</h1>
+				To change google map to your coordinats,please go to the end of the page, look for this code:
+				<pre>
+			        var places = [
+			            ["Place1", 40.733942, -74.060645, 1]
+			        ];
+
+			        function setMarkers(map, locations) {
+			            // Add markers to the map
+
+			            // Marker sizes are expressed as a Size of X,Y
+			            // where the origin of the image (0,0) is located
+			            // in the top left of the image.
+
+			            // Origins, anchor positions and coordinates of the marker
+			            // increase in the X direction to the right and in
+			            // the Y direction down.
+			            var image = {
+			                url: 'upload/map-pin.png',
+			                // This marker is 20 pixels wide by 32 pixels tall.
+			                //size: new google.maps.Size(20, 32),
+			                // The origin for this image is 0,0.
+			                origin: new google.maps.Point(0, 0),
+			                // The anchor for this image is the base of the flagpole at 0,32.
+			                anchor: new google.maps.Point(0, 32)
+			            };
+			            // Shapes define the clickable region of the icon.
+			            // The type defines an HTML &lt;area&gt; element 'poly' which
+			            // traces out a polygon as a series of X,Y points. The final
+			            // coordinate closes the poly by connecting to the first
+			            // coordinate.
+			            var shape = {
+			                coords: [1, 1, 1, 20, 18, 20, 18, 1],
+			                type: 'poly'
+			            };
+			            for (var i = 0; i < locations.length; i++) {
+			                var beach = locations[i];
+			                var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+			                var marker = new google.maps.Marker({
+			                    position: myLatLng,
+			                    map: map,
+			                    icon: image,
+			                    shape: shape,
+			                    title: beach[0],
+			                    zIndex: beach[3]
+			                });
+			            }
+			        }
+				</pre>
+				<p>see this line:["Place1", 40.733942, -74.060645, 1] so these are the coordinats that u need to change and u r good to go :D</p>
+			</section>
+
+			<section id="mainnav">
+				<h1>Main Navigation</h1>
+				<p>When you open the index.html u will see 2 navigations, one is for the mobile versions which you will se with this class "mobile-menu-wrapper" and the navigation for desktops which has this class "menu-wrapper"</p>
+				here's the example of default nav:
+
+				<pre>
+
+			        &lt;div id="header" class="header-wrapper"&gt;
+			            &lt;div class="header-inside"&gt;
+			                &lt;div class="logo"&gt;
+			                    &lt;a href="index.html" title="Hire Me Agency"&gt;&lt;img class="logoImage" src="images/logo.png" alt="Hire Me Agency" /&gt;&lt;img class="logoImageRetina" src="images/logo-retina.png" alt="Hire Me Agency" /&gt;&lt;/a&gt;
+			                    &lt;div class="clear"&gt;&lt;/div&gt;
+			                &lt;/div&gt;
+			                &lt;div class="menu-wrapper"&gt;
+			                    &lt;div class="menu-icons"&gt;
+			                        &lt;div class="menu-icons-inside"&gt;
+			                            &lt;div class="menu-icon menu-icon-standard"&gt;&lt;span class="menu-icon-create"&gt;&lt;/span&gt;&lt;/div&gt;
+			                            &lt;div class="menu-icon menu-icon-mobile"&gt;&lt;span class="menu-icon-create"&gt;&lt;/span&gt;&lt;/div&gt;
+			                        &lt;/div&gt;
+			                        &lt;div id="trigger-overlay" class="header-search pe-7s-search"&gt;&lt;/div&gt;
+			                    &lt;/div&gt;
+			                    &lt;div class="main-menu"&gt;
+			                        &lt;div class="menu-main-nav-menu-container"&gt;
+			                            &lt;ul id="menu-main-nav-menu" class="sf-menu"&gt;
+			                                &lt;li class="menu-item current-menu-item current_page_item menu-item-has-children"&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;
+			                                    &lt;ul class="submenu_1"&gt;
+			                                        &lt;li class="menu-item"&gt;&lt;a href="home-2.html#home-2"&gt;Home #2&lt;/a&gt;&lt;/li&gt;
+			                                    &lt;/ul&gt;
+			                                &lt;/li&gt;
+			                                &lt;li class="menu-item"&gt;&lt;a href="#about"&gt;About us&lt;/a&gt;&lt;/li&gt;
+			                                &lt;li class="menu-item"&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+			                                &lt;li class="menu-item"&gt;&lt;a href="#portfolio-items"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+			                                &lt;li class="menu-item"&gt;&lt;a href="#blog"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+			                                &lt;li class="menu-item"&gt;&lt;a href="#our-contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+			                            &lt;/ul&gt;
+			                        &lt;/div&gt;
+			                    &lt;/div&gt;
+			                &lt;/div&gt;
+			            &lt;/div&gt;
+			            &lt;div class="clear"&gt;&lt;/div&gt;
+			        &lt;/div&gt;
+
+				</pre>
+				<p>When u change something in the defauld/desktop nav, you need to change also in the mobile navigation...</p>
+			</section>
+		</div>
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Nivo Lightbox -->
+		<!-- Scripts.js -->
+		<script src="js/scripts.js"></script>
+
+	</body>
+</html>
